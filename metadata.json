@@ -1,0 +1,8 @@
+{
+  "name": "灵语教学助手",
+  "description": "一个先进的人工智能系统，旨在帮助教师高效地创建 PPT 课件、Word 教案及互动教学材料。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

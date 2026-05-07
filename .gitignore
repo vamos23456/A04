@@ -1,0 +1,14 @@
+.vercel
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+
+backend/python_export/.env
+backend/python_export/.env.*
+!backend/python_export/.env.example
+backend/python_export/venv/
+backend/python_export/.venv/
+backend/python_export/app.db

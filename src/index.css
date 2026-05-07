@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-serif italic;
+}
+
+.ppt-container section {
+  @apply relative;
+}
+
+.ppt-container section::after {
+  content: "AI Courseware Designer";
+  @apply absolute bottom-4 right-8 text-[10px] font-mono text-gray-400 uppercase tracking-widest opacity-50;
+}
+
+@keyframes teaching-loader-anim {
+  0% {
+    inset: 0 14px 14px 0;
+  }
+  12.5% {
+    inset: 0 14px 0 0;
+  }
+  25% {
+    inset: 14px 14px 0 0;
+  }
+  37.5% {
+    inset: 14px 0 0 0;
+  }
+  50% {
+    inset: 14px 0 0 14px;
+  }
+  62.5% {
+    inset: 0 0 0 14px;
+  }
+  75% {
+    inset: 0 0 14px 14px;
+  }
+  87.5% {
+    inset: 0 0 14px 0;
+  }
+  100% {
+    inset: 0 14px 14px 0;
+  }
+}
+
+.teaching-loader {
+  position: relative;
+  width: 22px;
+  aspect-ratio: 1;
+}
+
+.teaching-loader-ring {
+  position: absolute;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+  animation: teaching-loader-anim 2.5s infinite;
+}
+
+.teaching-loader-ring-delay {
+  animation-delay: -1.25s;
+}
